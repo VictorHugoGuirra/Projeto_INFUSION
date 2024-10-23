@@ -5,8 +5,8 @@ function Menu(config){
     
     this.maxWidth = config.widthEnabled || false;
     
-    var _opened = false;
-    var _this = this;
+    let _opened = false;
+    let _this = this;
     
     this.btn.removeAttribute('style')
     //closeMenu()
@@ -37,9 +37,9 @@ function Menu(config){
     }
     
     function openMenu(){
-        var _top = _this.nav.getBoundingClientRect().top + 'px'
+        let _top = _this.nav.getBoundingClientRect().top + 'px'
         
-        var _style = {
+        let _style = {
             maxHeight: 'calc(100vh - '+ _top +' )',
             overflow: 'hidden'
         }
@@ -56,7 +56,7 @@ function Menu(config){
     }
     
     function closeMenu(){
-        var _style = {
+        let _style = {
             maxHeight: '0px',
             overflow: 'hidden'
         }

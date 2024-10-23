@@ -7,13 +7,13 @@ function Carousel(config){
     
     this.btnNext = (typeof config.btnNext === 'string') ? this.container.querySelector(config.btnNext) : config.btnNext
     
-    var _this = this;
-    var _currentSlide = 0
+    let _this = this;
+    let _currentSlide = 0
     
     init()
     
     function init(){
-        var _show = _this.container.querySelectorAll('.show')
+        let _show = _this.container.querySelectorAll('.show')
         
         Array.prototype.forEach.call(_show, function(sh){
             sh.classList.remove('show')
@@ -41,8 +41,8 @@ function Carousel(config){
     }
     
     function showSlide(){
-        var qtd = _this.itens.length;
-        var slide = _currentSlide % qtd;
+        let qtd = _this.itens.length;
+        let slide = _currentSlide % qtd;
         slide = Math.abs(slide);
         
         _this.container.querySelector('.show').classList.remove('show');
